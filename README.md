@@ -1,0 +1,2 @@
+# gem_appreciation_management_system
+本科期间的软件工程课设。基于Django和Bootstrap写成的管理系统
