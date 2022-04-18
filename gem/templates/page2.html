@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="宝石鉴定系统">
+    <meta name="author" content="曹泽昊">
+
+    <title>宝石鉴定系统-样品检测</title>
+
+    <!-- Custom fonts for this template -->
+    <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="/static/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/gem/">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">宝石鉴定系统</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/gem/">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>主页</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                鉴定功能
+            </div>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/gem/page1/">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>鉴定收样</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/gem/page2/">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>样品检测</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                管理功能
+            </div>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="/gem/page3/">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>任务管理</span></a>
+            </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="/gem/page4/">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>证书管理</span></a>
+            </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="/gem/page5/">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>报表功能</span></a>
+            </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="/gem/page6/">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>会员管理</span></a>
+            </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>系统管理</span></a>
+            </li>
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>日志管理</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Message -->
+{#            <div class="sidebar-card">#}
+{#                <img class="sidebar-card-illustration mb-2" src="/static/img/undraw_rocket.svg" alt="">#}
+{#                <p class="text-center mb-2">#}
+{#                    <div><strong>计创18小组制作</strong> </div>#}
+{#                    <div>曹泽昊 程振荣</div>#}
+{#                    <div>关絜匀 宁文奇</div>#}
+{#                    <div>用于2020秋软工课设</div>#}
+{#                </p>#}
+{#            </div>#}
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+{#            <form id="content" method="POST">#}
+
+            {% csrf_token %}
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">系统管理员</span>
+                                <img class="img-profile rounded-circle"
+                                    src="/static/img/undraw_profile.svg">
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">样品检测</h1>
+
+
+                    <a href="" class="btn btn-primary btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-flag"></i>
+                                        </span>
+                                        <span class="text">查询/刷新</span>
+                    </a>
+
+
+
+                    <a href="/gem/page2/add/" class="btn btn-info btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-info-circle"></i>
+                        </span>
+                        <span class="text">添加样品</span>
+                    </a>
+
+                    <a href="/gem/page2/edit/" class="btn btn-secondary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                        <span class="text">通过审核</span>
+                    </a>
+
+                    <p></p>
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">当前样品检测信息</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+{#                                            <th>选择</th>#}
+                                            <th>检测批号</th>
+                                            <th>任务状态</th>
+                                            <th>编号</th>
+                                            <th>鉴定结果</th>
+                                            <th>外观</th>
+                                            <th>质量</th>
+                                            <th>密度</th>
+                                            <th>折射率</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+{#                                            <th>选择</th>#}
+                                            <th>检测批号</th>
+                                            <th>任务状态</th>
+                                            <th>编号</th>
+                                            <th>鉴定结果</th>
+                                            <th>外观</th>
+                                            <th>质量</th>
+                                            <th>密度</th>
+                                            <th>折射率</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        {% for v in v1 %}
+                                            <tr>
+{#                                                <td><input type="checkbox" name={{ v.no }}/></td>#}
+                                                <td>{{ v.testNo }}</td>
+                                                <td>{{ v.situation }}</td>
+                                                <td>{{ v.no }}</td>
+                                                <td>{{ v.result }}</td>
+                                                <td>{{ v.appear }}</td>
+                                                <td>{{ v.weight }}</td>
+                                                <td>{{ v.midu }}</td>
+                                                <td>{{ v.zheshe }}</td>
+                                            </tr>
+                                        {% endfor %}
+
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+{#            </form>#}
+
+{#            {% if messages %}#}
+{#                <script>#}
+{#                    {% for msg in messages %}#}
+{#                        alert('{{ msg.message }}');#}
+{#                    {% endfor %}#}
+{#                </script>#}
+{#            {% endif %}#}
+
+            </div>
+            <!-- End of Main Content -->
+
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/static/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/static/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/static/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/static/js/demo/datatables-demo.js"></script>
+
+</body>
+
+</html>
